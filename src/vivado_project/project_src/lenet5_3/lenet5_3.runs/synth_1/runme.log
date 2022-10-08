@@ -1,0 +1,1892 @@
+
+*** Running vivado
+    with args -log tops.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tops.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source tops.tcl -notrace
+Command: synth_design -top tops -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24716 
+WARNING: [Synth 8-2611] redeclaration of ansi port led_rgb is not allowed [E:/big_homework/final/LeNet/top.sv:21]
+WARNING: [Synth 8-976] led_rgb has already been declared [E:/big_homework/final/LeNet/top.sv:21]
+WARNING: [Synth 8-2654] second declaration of led_rgb ignored [E:/big_homework/final/LeNet/top.sv:21]
+INFO: [Synth 8-994] led_rgb is declared here [E:/big_homework/final/LeNet/top.sv:15]
+WARNING: [Synth 8-2306] macro CONV1_SIZE redefined [E:/big_homework/final/LeNet/lenet_top.v:14]
+WARNING: [Synth 8-2306] macro DATA_SIZE redefined [E:/big_homework/final/LeNet/max_pool.v:22]
+WARNING: [Synth 8-2306] macro DATA_SIZE redefined [E:/big_homework/final/LeNet/multi_add.v:24]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 395.742 ; gain = 109.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tops' [E:/big_homework/final/LeNet/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'lenet_top' [E:/big_homework/final/LeNet/lenet_top.v:34]
+	Parameter S_IDLE bound to: 9'b100000000 
+	Parameter S_CONV_1 bound to: 9'b010000000 
+	Parameter S_POOL_1 bound to: 9'b001000000 
+	Parameter S_CONV_2 bound to: 9'b000100000 
+	Parameter S_POOL_2 bound to: 9'b000010000 
+	Parameter S_CONV_3 bound to: 9'b000001000 
+	Parameter S_FC_1 bound to: 9'b000000100 
+	Parameter S_FC_2 bound to: 9'b000000010 
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (1#1) [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (2#1) [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (3#1) [C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/.Xil/Vivado-24912-LAPTOP-L7852B3S/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'conv_1' [E:/big_homework/final/LeNet/conv_1.v:30]
+	Parameter S_IDLE bound to: 7'b1000000 
+	Parameter S_CHECK bound to: 7'b0100000 
+	Parameter S_LOAD_WEIGHTS bound to: 7'b0010000 
+	Parameter S_LOAD_BIAS bound to: 7'b0001000 
+	Parameter S_LOAD_DATA bound to: 7'b0000100 
+	Parameter S_CONVOLUTE bound to: 7'b0000010 
+	Parameter S_STORE_RESULT bound to: 7'b0000001 
+	Parameter conv1_weights_base bound to: 0 - type: integer 
+	Parameter conv1_bias_base bound to: 150 - type: integer 
+	Parameter conv1_result_base bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'multi_add' [E:/big_homework/final/LeNet/multi_add.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'multi_add' (4#1) [E:/big_homework/final/LeNet/multi_add.v:26]
+INFO: [Synth 8-6157] synthesizing module 'relu_1' [E:/big_homework/final/LeNet/relu_1.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'relu_1' (5#1) [E:/big_homework/final/LeNet/relu_1.v:24]
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:152]
+INFO: [Synth 8-6155] done synthesizing module 'conv_1' (6#1) [E:/big_homework/final/LeNet/conv_1.v:30]
+INFO: [Synth 8-6157] synthesizing module 'pool_1' [E:/big_homework/final/LeNet/pool_1.v:28]
+	Parameter S_IDLE bound to: 5'b10000 
+	Parameter S_CHECK bound to: 5'b01000 
+	Parameter S_LOAD_DATA bound to: 5'b00100 
+	Parameter S_POOLING bound to: 5'b00010 
+	Parameter S_STORE_RESULT bound to: 5'b00001 
+	Parameter conv1_result_base bound to: 0 - type: integer 
+	Parameter pool1_result_base bound to: 4704 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'max_pool' [E:/big_homework/final/LeNet/max_pool.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'max_pool' (7#1) [E:/big_homework/final/LeNet/max_pool.v:24]
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'pool_1' (8#1) [E:/big_homework/final/LeNet/pool_1.v:28]
+INFO: [Synth 8-6157] synthesizing module 'conv_2' [E:/big_homework/final/LeNet/conv_2.v:29]
+	Parameter S_IDLE bound to: 7'b1000000 
+	Parameter S_CHECK bound to: 7'b0100000 
+	Parameter S_LOAD_WEIGHTS bound to: 7'b0010000 
+	Parameter S_LOAD_BIAS bound to: 7'b0001000 
+	Parameter S_LOAD_DATA bound to: 7'b0000100 
+	Parameter S_CONVOLUTE bound to: 7'b0000010 
+	Parameter S_STORE_RESULT bound to: 7'b0000001 
+	Parameter pool1_result_base bound to: 4704 - type: integer 
+	Parameter conv2_weights_base bound to: 156 - type: integer 
+	Parameter conv2_bias_base bound to: 2556 - type: integer 
+	Parameter conv2_result_base bound to: 5880 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:149]
+INFO: [Synth 8-6155] done synthesizing module 'conv_2' (9#1) [E:/big_homework/final/LeNet/conv_2.v:29]
+INFO: [Synth 8-6157] synthesizing module 'pool_2' [E:/big_homework/final/LeNet/pool_2.v:28]
+	Parameter S_IDLE bound to: 5'b10000 
+	Parameter S_CHECK bound to: 5'b01000 
+	Parameter S_LOAD_DATA bound to: 5'b00100 
+	Parameter S_POOLING bound to: 5'b00010 
+	Parameter S_STORE_RESULT bound to: 5'b00001 
+	Parameter conv2_result_base bound to: 5880 - type: integer 
+	Parameter pool2_result_base bound to: 7480 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'pool_2' (10#1) [E:/big_homework/final/LeNet/pool_2.v:28]
+INFO: [Synth 8-6157] synthesizing module 'conv_3' [E:/big_homework/final/LeNet/conv_3.v:29]
+	Parameter S_IDLE bound to: 7'b1000000 
+	Parameter S_CHECK bound to: 7'b0100000 
+	Parameter S_LOAD_WEIGHTS bound to: 7'b0010000 
+	Parameter S_LOAD_BIAS bound to: 7'b0001000 
+	Parameter S_LOAD_DATA bound to: 7'b0000100 
+	Parameter S_CONVOLUTE bound to: 7'b0000010 
+	Parameter S_STORE_RESULT bound to: 7'b0000001 
+	Parameter pool2_result_base bound to: 7480 - type: integer 
+	Parameter conv3_weights_base bound to: 2572 - type: integer 
+	Parameter conv3_bias_base bound to: 50572 - type: integer 
+	Parameter conv3_result_base bound to: 7880 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/conv_3.v:150]
+INFO: [Synth 8-6155] done synthesizing module 'conv_3' (11#1) [E:/big_homework/final/LeNet/conv_3.v:29]
+INFO: [Synth 8-6157] synthesizing module 'fc_1' [E:/big_homework/final/LeNet/fc_1.v:27]
+	Parameter S_IDLE bound to: 7'b1000000 
+	Parameter S_CHECK bound to: 7'b0100000 
+	Parameter S_LOAD_WEIGHTS bound to: 7'b0010000 
+	Parameter S_LOAD_BIAS bound to: 7'b0001000 
+	Parameter S_LOAD_DATA bound to: 7'b0000100 
+	Parameter S_MULTI_ADD bound to: 7'b0000010 
+	Parameter S_STORE_RESULT bound to: 7'b0000001 
+	Parameter conv3_result_base bound to: 7880 - type: integer 
+	Parameter fc1_weights_base bound to: 50692 - type: integer 
+	Parameter fc1_bias_base bound to: 61192 - type: integer 
+	Parameter fc1_result_base bound to: 8000 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/fc_1.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'fc_1' (12#1) [E:/big_homework/final/LeNet/fc_1.v:27]
+INFO: [Synth 8-6157] synthesizing module 'fc_2' [E:/big_homework/final/LeNet/fc_2.v:26]
+	Parameter S_IDLE bound to: 7'b1000000 
+	Parameter S_CHECK bound to: 7'b0100000 
+	Parameter S_LOAD_WEIGHTS bound to: 7'b0010000 
+	Parameter S_LOAD_BIAS bound to: 7'b0001000 
+	Parameter S_LOAD_DATA bound to: 7'b0000100 
+	Parameter S_MULTI_ADD bound to: 7'b0000010 
+	Parameter S_STORE_RESULT bound to: 7'b0000001 
+	Parameter fc1_result_base bound to: 8000 - type: integer 
+	Parameter fc2_weights_base bound to: 61276 - type: integer 
+	Parameter fc2_bias_base bound to: 62276 - type: integer 
+	Parameter fc2_result_base bound to: 8084 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_begin_reg was removed.  [E:/big_homework/final/LeNet/fc_2.v:138]
+WARNING: [Synth 8-3848] Net result_bram_dina in module/entity fc_2 does not have driver. [E:/big_homework/final/LeNet/fc_2.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'fc_2' (13#1) [E:/big_homework/final/LeNet/fc_2.v:26]
+WARNING: [Synth 8-151] case item 9'b000001000 is unreachable [E:/big_homework/final/LeNet/lenet_top.v:563]
+INFO: [Synth 8-6157] synthesizing module 'max_index_10' [E:/big_homework/final/LeNet/max_index_10.v:1]
+	Parameter BIT_WIDTH bound to: 16 - type: integer 
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'larger_index' [E:/big_homework/final/LeNet/larger_index.v:1]
+	Parameter BIT_WIDTH bound to: 16 - type: integer 
+	Parameter NUM_INPUTS bound to: 10 - type: integer 
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'larger_index' (14#1) [E:/big_homework/final/LeNet/larger_index.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'max_index_10' (15#1) [E:/big_homework/final/LeNet/max_index_10.v:1]
+WARNING: [Synth 8-6014] Unused sequential element relu_1_en_reg was removed.  [E:/big_homework/final/LeNet/lenet_top.v:390]
+INFO: [Synth 8-6155] done synthesizing module 'lenet_top' (16#1) [E:/big_homework/final/LeNet/lenet_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'x7seg_dec' [E:/big_homework/final/LeNet/x7seg_dec.sv:3]
+	Parameter NUM0 bound to: 8'b11000000 
+	Parameter NUM1 bound to: 8'b11111001 
+	Parameter NUM2 bound to: 8'b10100100 
+	Parameter NUM3 bound to: 8'b10110000 
+	Parameter NUM4 bound to: 8'b10011001 
+	Parameter NUM5 bound to: 8'b10010010 
+	Parameter NUM6 bound to: 8'b10000010 
+	Parameter NUM7 bound to: 8'b11111000 
+	Parameter NUM8 bound to: 8'b10000000 
+	Parameter NUM9 bound to: 8'b10010000 
+	Parameter NUMA bound to: 8'b10001000 
+	Parameter NUMB bound to: 8'b10000011 
+	Parameter NUMC bound to: 8'b11000110 
+	Parameter NUMD bound to: 8'b10100001 
+	Parameter NUME bound to: 8'b10000110 
+	Parameter NUMF bound to: 8'b10001110 
+INFO: [Synth 8-6155] done synthesizing module 'x7seg_dec' (17#1) [E:/big_homework/final/LeNet/x7seg_dec.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'x7seg_scan' [E:/big_homework/final/LeNet/x7seg_scan.sv:3]
+	Parameter STUBNUM bound to: 8 - type: integer 
+	Parameter AN0 bound to: 8'b11111110 
+	Parameter AN1 bound to: 8'b11111101 
+	Parameter AN2 bound to: 8'b11111011 
+	Parameter AN3 bound to: 8'b11110111 
+	Parameter AN4 bound to: 8'b11101111 
+	Parameter AN5 bound to: 8'b11011111 
+	Parameter AN6 bound to: 8'b10111111 
+	Parameter AN7 bound to: 8'b01111111 
+	Parameter CNT_MAX bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'x7seg_scan' (18#1) [E:/big_homework/final/LeNet/x7seg_scan.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'tops' (19#1) [E:/big_homework/final/LeNet/top.sv:1]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[15]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[14]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[13]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[12]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[11]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[10]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[9]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[8]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[7]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[6]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[5]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[4]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[3]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[2]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[1]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 475.660 ; gain = 189.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 475.660 ; gain = 189.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 475.660 ; gain = 189.570
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'lenet_top/result_bram'
+Finished Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'lenet_top/result_bram'
+Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'lenet_top/bias_weights_bram'
+Finished Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'lenet_top/bias_weights_bram'
+Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'lenet_top/input_bram'
+Finished Parsing XDC File [c:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'lenet_top/input_bram'
+Parsing XDC File [E:/big_homework/LeNet/lenet.xdc]
+Finished Parsing XDC File [E:/big_homework/LeNet/lenet.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/big_homework/LeNet/lenet.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tops_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tops_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 882.699 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'lenet_top/bias_weights_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'lenet_top/input_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'lenet_top/result_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 883.625 ; gain = 597.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 883.625 ; gain = 597.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for lenet_top/result_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for lenet_top/bias_weights_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for lenet_top/input_bram. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 883.625 ; gain = 597.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/big_homework/final/LeNet/multi_add.v:67]
+INFO: [Synth 8-4471] merging register 'result_bram_wea_reg' into 'result_bram_ena_reg' [E:/big_homework/final/LeNet/conv_1.v:100]
+WARNING: [Synth 8-6014] Unused sequential element result_bram_wea_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:100]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "filter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "row" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_1.v:241]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_1.v:241]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/big_homework/final/LeNet/pool_1.v:118]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "channel" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "row" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "result" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/pool_1.v:153]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/pool_1.v:153]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/big_homework/final/LeNet/conv_2.v:203]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "filter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "channel" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "row" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:144]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:144]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:248]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:248]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:203]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_2.v:203]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/big_homework/final/LeNet/pool_2.v:118]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "channel" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "row" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "result" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/pool_2.v:153]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/pool_2.v:153]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/big_homework/final/LeNet/conv_3.v:204]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "filter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "channel" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "row" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_3.v:145]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/conv_3.v:145]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lenet_top'
+INFO: [Synth 8-5546] ROM "fc_2_bias_weights_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fc_1_bias_weights_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_3_bias_weights_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_2_bias_weights_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_1_bias_weights_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bias_weights_bram_addra" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "result_bram_addra" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pool_1_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_2_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_3_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pool_2_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fc_1_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fc_2_result_bram_douta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "input_bram_addra" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "clk_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "led_rgb0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "led_rgb0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "led_rgb0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm281EA1610300'
+WARNING: [Synth 8-327] inferring latch for variable 'fc_2_bias_weights_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:353]
+WARNING: [Synth 8-327] inferring latch for variable 'fc_2_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:354]
+WARNING: [Synth 8-327] inferring latch for variable 'pool_2_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:274]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_3_bias_weights_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:298]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_3_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:299]
+WARNING: [Synth 8-327] inferring latch for variable 'fc_1_bias_weights_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:326]
+WARNING: [Synth 8-327] inferring latch for variable 'fc_1_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:327]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_2_bias_weights_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:247]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_2_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:248]
+WARNING: [Synth 8-327] inferring latch for variable 'pool_1_result_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:223]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_1_bias_weights_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:193]
+WARNING: [Synth 8-327] inferring latch for variable 'conv_1_input_bram_douta_reg' [E:/big_homework/final/LeNet/lenet_top.v:194]
+WARNING: [Synth 8-327] inferring latch for variable 'bias_weights_bram_addra_reg' [E:/big_homework/final/LeNet/lenet_top.v:131]
+WARNING: [Synth 8-327] inferring latch for variable 'result_bram_addra_reg' [E:/big_homework/final/LeNet/lenet_top.v:140]
+WARNING: [Synth 8-327] inferring latch for variable 'result_bram_dina_reg' [E:/big_homework/final/LeNet/lenet_top.v:141]
+WARNING: [Synth 8-327] inferring latch for variable 'input_bram_addra_reg' [E:/big_homework/final/LeNet/lenet_top.v:149]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 883.625 ; gain = 597.535
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |lenet_top__GB0 |           1|     37070|
+|2     |lenet_top__GB1 |           1|     31598|
+|3     |lenet_top__GB2 |           1|     16834|
+|4     |lenet_top__GB3 |           1|     34963|
+|5     |lenet_top__GB4 |           1|     39079|
+|6     |fc_2           |           1|     40056|
+|7     |max_index_10   |           1|       972|
+|8     |lenet_top__GB7 |           1|        15|
+|9     |tops__GC0      |           1|       639|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 60    
+	   2 Input     17 Bit       Adders := 1     
+	  26 Input     16 Bit       Adders := 5     
+	   2 Input     16 Bit       Adders := 11    
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 7     
+	   3 Input     13 Bit       Adders := 2     
+	   4 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 10    
+	              160 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 59    
+	               18 Bit    Registers := 9     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 23    
+	               13 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 5     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 41    
++---Multipliers : 
+	                 4x32  Multipliers := 1     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 20    
+	   2 Input    400 Bit        Muxes := 20    
+	   8 Input    160 Bit        Muxes := 1     
+	   2 Input    160 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 6     
+	   6 Input     64 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 23    
+	   2 Input     32 Bit        Muxes := 32    
+	   3 Input     32 Bit        Muxes := 7     
+	   6 Input     32 Bit        Muxes := 10    
+	   2 Input     17 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 16    
+	   2 Input     16 Bit        Muxes := 21    
+	   6 Input     16 Bit        Muxes := 3     
+	   8 Input     13 Bit        Muxes := 4     
+	   2 Input     13 Bit        Muxes := 8     
+	   6 Input     13 Bit        Muxes := 2     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 5     
+	   8 Input      7 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 5     
+	   7 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 9     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 71    
+	   8 Input      1 Bit        Muxes := 101   
+	   3 Input      1 Bit        Muxes := 7     
+	   9 Input      1 Bit        Muxes := 17    
+	   6 Input      1 Bit        Muxes := 35    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module tops 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 3     
+Module multi_add 
+Detailed RTL Component Info : 
++---Adders : 
+	  26 Input     16 Bit       Adders := 1     
+Module fc_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 2     
+	              160 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 4     
+	   2 Input    400 Bit        Muxes := 4     
+	   8 Input    160 Bit        Muxes := 1     
+	   2 Input    160 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 1     
+Module larger_index__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module larger_index 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module multi_add__1 
+Detailed RTL Component Info : 
++---Adders : 
+	  26 Input     16 Bit       Adders := 1     
+Module relu_1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module conv_3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   4 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 2     
+	               32 Bit    Registers := 8     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 4     
+	   2 Input    400 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 2     
+	   8 Input     13 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 1     
+Module multi_add__2 
+Detailed RTL Component Info : 
++---Adders : 
+	  26 Input     16 Bit       Adders := 1     
+Module relu_1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module fc_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 4     
+	   2 Input    400 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input     13 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 17    
+	   3 Input      1 Bit        Muxes := 1     
+Module max_pool 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+Module pool_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 10    
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   6 Input     64 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 7     
+	   6 Input     32 Bit        Muxes := 5     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	   6 Input     13 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 14    
+	   3 Input      1 Bit        Muxes := 1     
+Module max_pool__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+Module pool_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 10    
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   6 Input     64 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 7     
+	   6 Input     32 Bit        Muxes := 5     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	   6 Input     13 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 14    
+	   3 Input      1 Bit        Muxes := 1     
+Module multi_add__3 
+Detailed RTL Component Info : 
++---Adders : 
+	  26 Input     16 Bit       Adders := 1     
+Module relu_1__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module conv_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 10    
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 2     
+	               32 Bit    Registers := 10    
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 4     
+	   2 Input    400 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module multi_add__4 
+Detailed RTL Component Info : 
++---Adders : 
+	  26 Input     16 Bit       Adders := 1     
+Module relu_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module conv_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 14    
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              400 Bit    Registers := 2     
+	               32 Bit    Registers := 10    
+	               18 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Multipliers : 
+	                 4x32  Multipliers := 1     
++---Muxes : 
+	   8 Input    400 Bit        Muxes := 4     
+	   2 Input    400 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 8     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 2     
+	   8 Input     13 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 1     
+Module lenet_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   8 Input     13 Bit        Muxes := 1     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 17    
+	   6 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 4     
+Module x7seg_scan 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "x7seg_scan/clk_flag" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: Generating DSP dout25, operation Mode is: A*B.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: Generating DSP dout24, operation Mode is: A*B.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: Generating DSP dout23, operation Mode is: A*B.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: Generating DSP dout22, operation Mode is: A*B.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: Generating DSP dout21, operation Mode is: A*B.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: Generating DSP dout20, operation Mode is: A*B.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: Generating DSP dout19, operation Mode is: A*B.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: Generating DSP dout18, operation Mode is: A*B.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: Generating DSP dout17, operation Mode is: A*B.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: Generating DSP dout16, operation Mode is: A*B.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: Generating DSP dout15, operation Mode is: A*B.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: Generating DSP dout14, operation Mode is: A*B.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: Generating DSP dout13, operation Mode is: A*B.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: Generating DSP dout12, operation Mode is: A*B.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: Generating DSP dout11, operation Mode is: A*B.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: Generating DSP dout10, operation Mode is: A*B.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: Generating DSP dout9, operation Mode is: A*B.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: Generating DSP dout8, operation Mode is: A*B.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: Generating DSP dout7, operation Mode is: A*B.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: Generating DSP dout6, operation Mode is: A*B.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: Generating DSP dout5, operation Mode is: A*B.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: Generating DSP dout4, operation Mode is: A*B.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: Generating DSP dout3, operation Mode is: A*B.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+INFO: [Synth 8-4471] merging register 'filter_reg[31:0]' into 'filter_reg[31:0]' [E:/big_homework/final/LeNet/conv_3.v:108]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/conv_3.v:109]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/conv_3.v:109]
+WARNING: [Synth 8-6014] Unused sequential element filter_reg was removed.  [E:/big_homework/final/LeNet/conv_3.v:108]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/conv_3.v:109]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/conv_3.v:109]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/conv_3.v:145]
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O30" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "channel" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[0]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[1]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[2]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[0]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[1]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[2]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[3]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[4]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[5]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[6]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[7]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[8]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[9]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[10]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[11]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[12]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[13]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[14]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[15]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[16]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[17]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[18]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[19]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[20]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[21]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[22]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[23]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[24]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[25]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[26]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[27]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[28]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[29]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/column_reg[30]' (FDE) to 'u_conv_3/column_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_conv_3/\column_reg[31] )
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[3]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[4]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[5]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[6]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[7]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[8]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[9]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[10]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[11]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[12]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[13]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[14]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[15]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[16]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[17]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[18]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[19]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[20]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[21]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[22]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[23]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[24]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[25]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[26]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[27]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[28]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[29]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/row_reg[30]' (FDE) to 'u_conv_3/row_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_conv_3/\row_reg[31] )
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[4]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[5]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[6]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[7]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[8]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[9]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[10]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[11]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[12]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[13]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[14]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[15]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[16]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[17]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[18]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[19]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[20]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[21]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[22]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[23]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[24]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[25]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[26]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[27]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[28]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[29]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_conv_3/channel_reg[30]' (FDE) to 'u_conv_3/channel_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (filter_reg[31]) is unused and will be removed from module conv_3.
+WARNING: [Synth 8-3332] Sequential element (filter_reg[30]) is unused and will be removed from module conv_3.
+WARNING: [Synth 8-3332] Sequential element (filter_reg[29]) is unused and will be removed from module conv_3.
+WARNING: [Synth 8-3332] Sequential element (filter_reg[28]) is unused and will be removed from module conv_3.
+WARNING: [Synth 8-3332] Sequential element (column_reg[31]) is unused and will be removed from module conv_3.
+WARNING: [Synth 8-3332] Sequential element (row_reg[31]) is unused and will be removed from module conv_3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: Generating DSP dout25, operation Mode is: A*B.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: Generating DSP dout24, operation Mode is: A*B.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: Generating DSP dout23, operation Mode is: A*B.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: Generating DSP dout22, operation Mode is: A*B.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: Generating DSP dout21, operation Mode is: A*B.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: Generating DSP dout20, operation Mode is: A*B.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: Generating DSP dout19, operation Mode is: A*B.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: Generating DSP dout18, operation Mode is: A*B.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: Generating DSP dout17, operation Mode is: A*B.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: Generating DSP dout16, operation Mode is: A*B.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: Generating DSP dout15, operation Mode is: A*B.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: Generating DSP dout14, operation Mode is: A*B.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: Generating DSP dout13, operation Mode is: A*B.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: Generating DSP dout12, operation Mode is: A*B.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: Generating DSP dout11, operation Mode is: A*B.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: Generating DSP dout10, operation Mode is: A*B.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: Generating DSP dout9, operation Mode is: A*B.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: Generating DSP dout8, operation Mode is: A*B.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: Generating DSP dout7, operation Mode is: A*B.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: Generating DSP dout6, operation Mode is: A*B.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: Generating DSP dout5, operation Mode is: A*B.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: Generating DSP dout4, operation Mode is: A*B.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: Generating DSP dout3, operation Mode is: A*B.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/fc_1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/fc_1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element B was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_1.v:138]
+DSP Report: Generating DSP bias_weights_bram_addra2, operation Mode is: A2*(B:0x7d).
+DSP Report: register row_reg is absorbed into DSP bias_weights_bram_addra2.
+DSP Report: operator bias_weights_bram_addra2 is absorbed into DSP bias_weights_bram_addra2.
+DSP Report: Generating DSP bias_weights_bram_addra0, operation Mode is: PCIN+A2:B2+(C:0xffffffffc604).
+DSP Report: register B is absorbed into DSP bias_weights_bram_addra0.
+DSP Report: register A is absorbed into DSP bias_weights_bram_addra0.
+DSP Report: operator bias_weights_bram_addra0 is absorbed into DSP bias_weights_bram_addra0.
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/pool_2.v:86]
+INFO: [Synth 8-4471] merging register 'column_reg[31:0]' into 'column_reg[31:0]' [E:/big_homework/final/LeNet/pool_2.v:89]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/pool_2.v:88]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/pool_2.v:86]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/pool_2.v:88]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:86]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:89]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:88]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:86]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/pool_2.v:88]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/pool_2.v:153]
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O60" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/pool_1.v:86]
+INFO: [Synth 8-4471] merging register 'column_reg[31:0]' into 'column_reg[31:0]' [E:/big_homework/final/LeNet/pool_1.v:89]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/pool_1.v:88]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/pool_1.v:86]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/pool_1.v:88]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:86]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:89]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:88]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:86]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/pool_1.v:88]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/pool_1.v:153]
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O220" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "result_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+DSP Report: Generating DSP result_bram_addra4, operation Mode is: A2*(B:0x1c).
+DSP Report: register channel_reg is absorbed into DSP result_bram_addra4.
+DSP Report: operator result_bram_addra4 is absorbed into DSP result_bram_addra4.
+DSP Report: Generating DSP result_bram_addra0, operation Mode is: C'+A*(B:0x1c).
+DSP Report: register C is absorbed into DSP result_bram_addra0.
+DSP Report: operator result_bram_addra0 is absorbed into DSP result_bram_addra0.
+DSP Report: operator result_bram_addra3 is absorbed into DSP result_bram_addra0.
+DSP Report: Generating DSP result_bram_addra0, operation Mode is: PCIN+A*(B:0x1c).
+DSP Report: operator result_bram_addra0 is absorbed into DSP result_bram_addra0.
+DSP Report: operator result_bram_addra3 is absorbed into DSP result_bram_addra0.
+DSP Report: Generating DSP result_bram_addra0, operation Mode is: PCIN+A:B+C.
+DSP Report: operator result_bram_addra0 is absorbed into DSP result_bram_addra0.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: Generating DSP dout25, operation Mode is: A*B.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: Generating DSP dout24, operation Mode is: A*B.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: Generating DSP dout23, operation Mode is: A*B.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: Generating DSP dout22, operation Mode is: A*B.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: Generating DSP dout21, operation Mode is: A*B.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: Generating DSP dout20, operation Mode is: A*B.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: Generating DSP dout19, operation Mode is: A*B.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: Generating DSP dout18, operation Mode is: A*B.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: Generating DSP dout17, operation Mode is: A*B.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: Generating DSP dout16, operation Mode is: A*B.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: Generating DSP dout15, operation Mode is: A*B.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: Generating DSP dout14, operation Mode is: A*B.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: Generating DSP dout13, operation Mode is: A*B.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: Generating DSP dout12, operation Mode is: A*B.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: Generating DSP dout11, operation Mode is: A*B.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: Generating DSP dout10, operation Mode is: A*B.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: Generating DSP dout9, operation Mode is: A*B.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: Generating DSP dout8, operation Mode is: A*B.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: Generating DSP dout7, operation Mode is: A*B.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: Generating DSP dout6, operation Mode is: A*B.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: Generating DSP dout5, operation Mode is: A*B.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: Generating DSP dout4, operation Mode is: A*B.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: Generating DSP dout3, operation Mode is: A*B.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+INFO: [Synth 8-4471] merging register 'count_reg[31:0]' into 'count_reg[31:0]' [E:/big_homework/final/LeNet/conv_1.v:135]
+INFO: [Synth 8-4471] merging register 'filter_reg[31:0]' into 'filter_reg[31:0]' [E:/big_homework/final/LeNet/conv_1.v:110]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/conv_1.v:112]
+INFO: [Synth 8-4471] merging register 'column_reg[31:0]' into 'column_reg[31:0]' [E:/big_homework/final/LeNet/conv_1.v:113]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:135]
+WARNING: [Synth 8-6014] Unused sequential element filter_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:110]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:112]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [E:/big_homework/final/LeNet/conv_1.v:113]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/conv_1.v:241]
+INFO: [Synth 8-5545] ROM "O30" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "bias_weights_bram_ena" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP result_bram_addra2, operation Mode is: A2*(B:0x1c).
+DSP Report: register row_reg is absorbed into DSP result_bram_addra2.
+DSP Report: operator result_bram_addra2 is absorbed into DSP result_bram_addra2.
+DSP Report: Generating DSP result_bram_addra3, operation Mode is: A2*(B:0x1c).
+DSP Report: register filter_reg is absorbed into DSP result_bram_addra3.
+DSP Report: operator result_bram_addra3 is absorbed into DSP result_bram_addra3.
+DSP Report: Generating DSP result_bram_addra0, operation Mode is: C+A*(B:0x1c).
+DSP Report: operator result_bram_addra0 is absorbed into DSP result_bram_addra0.
+DSP Report: operator result_bram_addra2 is absorbed into DSP result_bram_addra0.
+INFO: [Synth 8-3886] merging instance 'u_conv_1/column_reg[5]' (FDE) to 'u_conv_1/column_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_conv_1/column_reg[6]' (FDE) to 'u_conv_1/column_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_conv_1/column_reg[7]' (FDE) to 'u_conv_1/column_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_conv_1/column_reg[8]' (FDE) to 'u_conv_1/column_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_conv_1/column_reg[9]' (FDE) to 'u_conv_1/column_reg[10]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_conv_1/\channel_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (channel_reg[31]) is unused and will be removed from module conv_1.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: Generating DSP dout25, operation Mode is: A*B.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: Generating DSP dout24, operation Mode is: A*B.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: Generating DSP dout23, operation Mode is: A*B.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: Generating DSP dout22, operation Mode is: A*B.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: Generating DSP dout21, operation Mode is: A*B.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: Generating DSP dout20, operation Mode is: A*B.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: Generating DSP dout19, operation Mode is: A*B.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: Generating DSP dout18, operation Mode is: A*B.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: Generating DSP dout17, operation Mode is: A*B.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: Generating DSP dout16, operation Mode is: A*B.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: Generating DSP dout15, operation Mode is: A*B.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: Generating DSP dout14, operation Mode is: A*B.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: Generating DSP dout13, operation Mode is: A*B.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: Generating DSP dout12, operation Mode is: A*B.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: Generating DSP dout11, operation Mode is: A*B.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: Generating DSP dout10, operation Mode is: A*B.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: Generating DSP dout9, operation Mode is: A*B.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: Generating DSP dout8, operation Mode is: A*B.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: Generating DSP dout7, operation Mode is: A*B.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: Generating DSP dout6, operation Mode is: A*B.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: Generating DSP dout5, operation Mode is: A*B.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: Generating DSP dout4, operation Mode is: A*B.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: Generating DSP dout3, operation Mode is: A*B.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+INFO: [Synth 8-4471] merging register 'filter_reg[31:0]' into 'filter_reg[31:0]' [E:/big_homework/final/LeNet/conv_2.v:107]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/conv_2.v:108]
+INFO: [Synth 8-4471] merging register 'filter_reg[31:0]' into 'filter_reg[31:0]' [E:/big_homework/final/LeNet/conv_2.v:107]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/conv_2.v:109]
+INFO: [Synth 8-4471] merging register 'channel_reg[31:0]' into 'channel_reg[31:0]' [E:/big_homework/final/LeNet/conv_2.v:108]
+WARNING: [Synth 8-6014] Unused sequential element filter_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:107]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:108]
+WARNING: [Synth 8-6014] Unused sequential element filter_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:107]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:109]
+WARNING: [Synth 8-6014] Unused sequential element B was removed.  [E:/big_homework/final/LeNet/conv_2.v:248]
+WARNING: [Synth 8-6014] Unused sequential element channel_reg was removed.  [E:/big_homework/final/LeNet/conv_2.v:108]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/conv_2.v:248]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/conv_2.v:144]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/conv_2.v:203]
+INFO: [Synth 8-5545] ROM "circle" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O30" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[4]' (FDE) to 'u_conv_2/column_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[5]' (FDE) to 'u_conv_2/column_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[6]' (FDE) to 'u_conv_2/column_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[7]' (FDE) to 'u_conv_2/column_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[8]' (FDE) to 'u_conv_2/column_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_conv_2/column_reg[9]' (FDE) to 'u_conv_2/column_reg[10]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (filter_reg[31]) is unused and will be removed from module conv_2.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: Generating DSP dout25, operation Mode is: A*B.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: operator dout25 is absorbed into DSP dout25.
+DSP Report: Generating DSP dout24, operation Mode is: A*B.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: operator dout24 is absorbed into DSP dout24.
+DSP Report: Generating DSP dout23, operation Mode is: A*B.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: operator dout23 is absorbed into DSP dout23.
+DSP Report: Generating DSP dout22, operation Mode is: A*B.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: operator dout22 is absorbed into DSP dout22.
+DSP Report: Generating DSP dout21, operation Mode is: A*B.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: operator dout21 is absorbed into DSP dout21.
+DSP Report: Generating DSP dout20, operation Mode is: A*B.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: operator dout20 is absorbed into DSP dout20.
+DSP Report: Generating DSP dout19, operation Mode is: A*B.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: operator dout19 is absorbed into DSP dout19.
+DSP Report: Generating DSP dout18, operation Mode is: A*B.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: operator dout18 is absorbed into DSP dout18.
+DSP Report: Generating DSP dout17, operation Mode is: A*B.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: operator dout17 is absorbed into DSP dout17.
+DSP Report: Generating DSP dout16, operation Mode is: A*B.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: operator dout16 is absorbed into DSP dout16.
+DSP Report: Generating DSP dout15, operation Mode is: A*B.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: operator dout15 is absorbed into DSP dout15.
+DSP Report: Generating DSP dout14, operation Mode is: A*B.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: operator dout14 is absorbed into DSP dout14.
+DSP Report: Generating DSP dout13, operation Mode is: A*B.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: operator dout13 is absorbed into DSP dout13.
+DSP Report: Generating DSP dout12, operation Mode is: A*B.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: operator dout12 is absorbed into DSP dout12.
+DSP Report: Generating DSP dout11, operation Mode is: A*B.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: operator dout11 is absorbed into DSP dout11.
+DSP Report: Generating DSP dout10, operation Mode is: A*B.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: operator dout10 is absorbed into DSP dout10.
+DSP Report: Generating DSP dout9, operation Mode is: A*B.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: operator dout9 is absorbed into DSP dout9.
+DSP Report: Generating DSP dout8, operation Mode is: A*B.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: operator dout8 is absorbed into DSP dout8.
+DSP Report: Generating DSP dout7, operation Mode is: A*B.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: operator dout7 is absorbed into DSP dout7.
+DSP Report: Generating DSP dout6, operation Mode is: A*B.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: operator dout6 is absorbed into DSP dout6.
+DSP Report: Generating DSP dout5, operation Mode is: A*B.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: operator dout5 is absorbed into DSP dout5.
+DSP Report: Generating DSP dout4, operation Mode is: A*B.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: operator dout4 is absorbed into DSP dout4.
+DSP Report: Generating DSP dout3, operation Mode is: A*B.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: operator dout3 is absorbed into DSP dout3.
+DSP Report: Generating DSP dout26, operation Mode is: A*B.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+DSP Report: operator dout26 is absorbed into DSP dout26.
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/fc_2.v:97]
+INFO: [Synth 8-4471] merging register 'row_reg[31:0]' into 'row_reg[31:0]' [E:/big_homework/final/LeNet/fc_2.v:97]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/fc_2.v:97]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [E:/big_homework/final/LeNet/fc_2.v:97]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+WARNING: [Synth 8-6014] Unused sequential element B was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [E:/big_homework/final/LeNet/fc_2.v:133]
+DSP Report: Generating DSP bias_weights_bram_addra2, operation Mode is: A2*(B:0x64).
+DSP Report: register row_reg is absorbed into DSP bias_weights_bram_addra2.
+DSP Report: operator bias_weights_bram_addra2 is absorbed into DSP bias_weights_bram_addra2.
+DSP Report: Generating DSP bias_weights_bram_addra0, operation Mode is: PCIN+A2:B2+(C:0xffffffffef5c).
+DSP Report: register B is absorbed into DSP bias_weights_bram_addra0.
+DSP Report: register A is absorbed into DSP bias_weights_bram_addra0.
+DSP Report: operator bias_weights_bram_addra0 is absorbed into DSP bias_weights_bram_addra0.
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[15]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[14]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[13]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[12]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[11]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[10]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[9]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[8]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[7]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[6]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[5]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[4]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[3]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[2]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[1]
+WARNING: [Synth 8-3331] design fc_2 has unconnected port result_bram_dina[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (result_bram_wea_reg)
+WARNING: [Synth 8-3332] Sequential element (result_bram_wea_reg) is unused and will be removed from module fc_2.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:02:29 . Memory (MB): peak = 883.625 ; gain = 597.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fc_1        | A2*(B:0x7d)                   | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fc_1        | PCIN+A2:B2+(C:0xffffffffc604) | 30     | 18     | 15     | -      | -1     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|pool_1      | A2*(B:0x1c)                   | 13     | 6      | -      | -      | 19     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|pool_1      | C'+A*(B:0x1c)                 | 13     | 6      | 13     | -      | 13     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|pool_1      | PCIN+A*(B:0x1c)               | 13     | 6      | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pool_1      | PCIN+A:B+C                    | 30     | 18     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_1      | A2*(B:0x1c)                   | 13     | 6      | -      | -      | 19     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_1      | A2*(B:0x1c)                   | 13     | 6      | -      | -      | 19     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_1      | C+A*(B:0x1c)                  | 13     | 6      | 13     | -      | 13     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multi_add   | A*B                           | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fc_2        | A2*(B:0x64)                   | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fc_2        | PCIN+A2:B2+(C:0xffffffffef5c) | 30     | 18     | 14     | -      | -1     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |lenet_top__GB0 |           1|      8922|
+|2     |lenet_top__GB1 |           1|      5881|
+|3     |lenet_top__GB2 |           1|      6997|
+|4     |lenet_top__GB3 |           1|      9015|
+|5     |lenet_top__GB4 |           1|     10788|
+|6     |fc_2           |           1|      6193|
+|7     |max_index_10   |           1|       664|
+|8     |lenet_top__GB7 |           1|         5|
+|9     |tops__GC0      |           1|       162|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:02:55 . Memory (MB): peak = 921.016 ; gain = 634.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:03:49 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |lenet_top__GB0 |           1|      8915|
+|2     |lenet_top__GB1 |           1|      5881|
+|3     |lenet_top__GB2 |           1|      6998|
+|4     |lenet_top__GB3 |           1|      9017|
+|5     |lenet_top__GB4 |           1|     10549|
+|6     |fc_2           |           1|      6193|
+|7     |max_index_10   |           1|       664|
+|8     |lenet_top__GB7 |           1|         5|
+|9     |tops__GC0      |           1|       162|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:55 ; elapsed = 00:04:35 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |lenet_top__GB0 |           1|      3610|
+|2     |lenet_top__GB1 |           1|      2316|
+|3     |lenet_top__GB2 |           1|      3083|
+|4     |lenet_top__GB3 |           1|      3830|
+|5     |lenet_top__GB4 |           1|      4460|
+|6     |fc_2           |           1|      2427|
+|7     |max_index_10   |           1|       296|
+|8     |lenet_top__GB7 |           1|         5|
+|9     |tops__GC0      |           1|        88|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:01 ; elapsed = 00:04:42 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:02 ; elapsed = 00:04:43 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:04:53 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:11 ; elapsed = 00:04:54 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:11 ; elapsed = 00:04:54 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:11 ; elapsed = 00:04:54 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_1 |         1|
+|2     |blk_mem_gen_0 |         1|
+|3     |blk_mem_gen_2 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |blk_mem_gen_1 |     1|
+|3     |blk_mem_gen_2 |     1|
+|4     |BUFG          |     6|
+|5     |CARRY4        |  2255|
+|6     |DSP48E1       |     2|
+|7     |DSP48E1_1     |     6|
+|8     |DSP48E1_2     |     2|
+|9     |DSP48E1_4     |     1|
+|10    |DSP48E1_5     |   124|
+|11    |DSP48E1_6     |     1|
+|12    |LUT1          |   639|
+|13    |LUT2          |  3549|
+|14    |LUT3          |  2512|
+|15    |LUT4          |  1653|
+|16    |LUT5          |  1607|
+|17    |LUT6          |  4969|
+|18    |FDCE          |     1|
+|19    |FDRE          |  2728|
+|20    |FDSE          |    16|
+|21    |LD            |   252|
+|22    |IBUF          |     8|
+|23    |OBUF          |    25|
++------+--------------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+----------------+------+
+|      |Instance                              |Module          |Cells |
++------+--------------------------------------+----------------+------+
+|1     |top                                   |                | 20404|
+|2     |  lenet_top                           |lenet_top       | 17293|
+|3     |    find_max                          |max_index_10    |    19|
+|4     |      FIND_LARGER_3                   |larger_index    |     2|
+|5     |      FIND_LARGER_4                   |larger_index_4  |     2|
+|6     |      \larger_comp1[0].FIND_LARGER_1  |larger_index_5  |     2|
+|7     |      \larger_comp1[1].FIND_LARGER_1  |larger_index_6  |     2|
+|8     |      \larger_comp1[2].FIND_LARGER_1  |larger_index_7  |     2|
+|9     |      \larger_comp1[3].FIND_LARGER_1  |larger_index_8  |     2|
+|10    |      \larger_comp1[4].FIND_LARGER_1  |larger_index_9  |     2|
+|11    |      \larger_comp2[0].FIND_LARGER_2  |larger_index_10 |     2|
+|12    |      \larger_comp2[1].FIND_LARGER_2  |larger_index_11 |     2|
+|13    |    u_conv_1                          |conv_1          |  3302|
+|14    |      conv_1_ma                       |multi_add_3     |   960|
+|15    |    u_conv_2                          |conv_2          |  3309|
+|16    |      conv_2_ma                       |multi_add_2     |  1037|
+|17    |    u_conv_3                          |conv_3          |  2990|
+|18    |      conv_2_ma                       |multi_add_1     |  1012|
+|19    |    u_fc_1                            |fc_1            |  2070|
+|20    |      fc_1_ma                         |multi_add_0     |  1015|
+|21    |    u_fc_2                            |fc_2            |  2591|
+|22    |      fc_1_ma                         |multi_add       |   766|
+|23    |    u_pool_1                          |pool_1          |  1199|
+|24    |    u_pool_2                          |pool_2          |  1454|
+|25    |  x7seg_dec                           |x7seg_dec       |     7|
+|26    |  x7seg_scan                          |x7seg_scan      |    76|
++------+--------------------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:11 ; elapsed = 00:04:54 . Memory (MB): peak = 1215.645 ; gain = 929.555
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:51 ; elapsed = 00:04:38 . Memory (MB): peak = 1215.645 ; gain = 521.590
+Synthesis Optimization Complete : Time (s): cpu = 00:03:12 ; elapsed = 00:04:56 . Memory (MB): peak = 1215.645 ; gain = 929.555
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2651 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 252 instances were transformed.
+  LD => LDCE: 252 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+345 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:21 ; elapsed = 00:05:07 . Memory (MB): peak = 1215.645 ; gain = 941.074
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/86199/lenet5_3/lenet5_3.runs/synth_1/tops.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1215.645 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file tops_utilization_synth.rpt -pb tops_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.233 . Memory (MB): peak = 1215.645 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  5 16:32:50 2022...

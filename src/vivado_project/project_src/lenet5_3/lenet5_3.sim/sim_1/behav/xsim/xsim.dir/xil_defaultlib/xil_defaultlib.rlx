@@ -1,0 +1,25 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/86199/lenet5_3/lenet5_3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1641364799,verilog,,E:/big_homework/final/LeNet/conv_1.v,,blk_mem_gen_0,,,,,,,,
+C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,1641364814,verilog,,C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,,blk_mem_gen_1,,,,,,,,
+C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v,1641542795,verilog,,C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,,blk_mem_gen_2,,,,,,,,
+E:/big_homework/LeNet/tb.sv,1641534935,systemVerilog,,,,TOP,,,,,,,,
+E:/big_homework/final/LeNet/conv_1.v,1641364129,verilog,,E:/big_homework/final/LeNet/conv_2.v,,conv_1,,,,,,,,
+E:/big_homework/final/LeNet/conv_2.v,1641364131,verilog,,E:/big_homework/final/LeNet/conv_3.v,,conv_2,,,,,,,,
+E:/big_homework/final/LeNet/conv_3.v,1641364132,verilog,,E:/big_homework/final/LeNet/fc_1.v,,conv_3,,,,,,,,
+E:/big_homework/final/LeNet/fc_1.v,1641364132,verilog,,E:/big_homework/final/LeNet/fc_2.v,,fc_1,,,,,,,,
+E:/big_homework/final/LeNet/fc_2.v,1641364133,verilog,,E:/big_homework/final/LeNet/larger_index.v,,fc_2,,,,,,,,
+E:/big_homework/final/LeNet/larger_index.v,1639836575,verilog,,E:/big_homework/final/LeNet/lenet_top.v,,larger_index,,,,,,,,
+E:/big_homework/final/LeNet/lenet_top.v,1641365465,verilog,,E:/big_homework/final/LeNet/max_index_10.v,,lenet_top,,,,,,,,
+E:/big_homework/final/LeNet/max_index_10.v,1639836575,verilog,,E:/big_homework/final/LeNet/max_pool.v,,max_index_10,,,,,,,,
+E:/big_homework/final/LeNet/max_pool.v,1641363986,verilog,,E:/big_homework/final/LeNet/multi_add.v,,max_pool,,,,,,,,
+E:/big_homework/final/LeNet/multi_add.v,1641364053,verilog,,E:/big_homework/final/LeNet/pool_1.v,,multi_add,,,,,,,,
+E:/big_homework/final/LeNet/pool_1.v,1641363972,verilog,,E:/big_homework/final/LeNet/pool_2.v,,pool_1,,,,,,,,
+E:/big_homework/final/LeNet/pool_2.v,1641363976,verilog,,E:/big_homework/final/LeNet/relu_1.v,,pool_2,,,,,,,,
+E:/big_homework/final/LeNet/relu_1.v,1641364176,verilog,,,,relu_1,,,,,,,,
+E:/big_homework/final/LeNet/top.sv,1641371071,systemVerilog,,E:/big_homework/final/LeNet/x7seg_dec.sv,,tops,,,,,,,,
+E:/big_homework/final/LeNet/x7seg_dec.sv,1619487015,systemVerilog,,E:/big_homework/final/LeNet/x7seg_scan.sv,,x7seg_dec,,,,,,,,
+E:/big_homework/final/LeNet/x7seg_scan.sv,1641371236,systemVerilog,,E:/big_homework/LeNet/tb.sv,,x7seg_scan,,,,,,,,

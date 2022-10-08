@@ -1,0 +1,49 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86199/lenet5_3/lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/conv_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/conv_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/conv_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/fc_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/fc_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/larger_index.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module larger_index
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/lenet_top.v" into library xil_defaultlib
+WARNING: [VRFC 10-998] macro CONV1_SIZE redefined [E:/big_homework/final/LeNet/lenet_top.v:14]
+INFO: [VRFC 10-311] analyzing module lenet_top
+WARNING: [VRFC 10-756] identifier conv_1_finish is used before its declaration [E:/big_homework/final/LeNet/lenet_top.v:57]
+WARNING: [VRFC 10-756] identifier conv_2_finish is used before its declaration [E:/big_homework/final/LeNet/lenet_top.v:63]
+WARNING: [VRFC 10-756] identifier conv_3_finish is used before its declaration [E:/big_homework/final/LeNet/lenet_top.v:69]
+WARNING: [VRFC 10-756] identifier fc_1_finish is used before its declaration [E:/big_homework/final/LeNet/lenet_top.v:75]
+WARNING: [VRFC 10-756] identifier fc_2_finish is used before its declaration [E:/big_homework/final/LeNet/lenet_top.v:81]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/max_index_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max_index_10
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/max_pool.v" into library xil_defaultlib
+WARNING: [VRFC 10-998] macro DATA_SIZE redefined [E:/big_homework/final/LeNet/max_pool.v:22]
+INFO: [VRFC 10-311] analyzing module max_pool
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/multi_add.v" into library xil_defaultlib
+WARNING: [VRFC 10-998] macro DATA_SIZE redefined [E:/big_homework/final/LeNet/multi_add.v:24]
+INFO: [VRFC 10-311] analyzing module multi_add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/pool_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pool_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/pool_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pool_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/big_homework/final/LeNet/relu_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module relu_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/big_homework/final/LeNet/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tops
+WARNING: [VRFC 10-1315] redeclaration of ansi port led_rgb is not allowed [E:/big_homework/final/LeNet/top.sv:21]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/big_homework/final/LeNet/x7seg_dec.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module x7seg_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/big_homework/final/LeNet/x7seg_scan.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module x7seg_scan
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/big_homework/LeNet/tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP

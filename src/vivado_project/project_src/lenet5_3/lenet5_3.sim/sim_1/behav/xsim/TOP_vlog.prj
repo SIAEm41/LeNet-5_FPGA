@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lenet5_3.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v" \
+"../../../../lenet5_3.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+"../../../../lenet5_3.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"E:/big_homework/final/LeNet/conv_1.v" \
+"E:/big_homework/final/LeNet/conv_2.v" \
+"E:/big_homework/final/LeNet/conv_3.v" \
+"E:/big_homework/final/LeNet/fc_1.v" \
+"E:/big_homework/final/LeNet/fc_2.v" \
+"E:/big_homework/final/LeNet/larger_index.v" \
+"E:/big_homework/final/LeNet/lenet_top.v" \
+"E:/big_homework/final/LeNet/max_index_10.v" \
+"E:/big_homework/final/LeNet/max_pool.v" \
+"E:/big_homework/final/LeNet/multi_add.v" \
+"E:/big_homework/final/LeNet/pool_1.v" \
+"E:/big_homework/final/LeNet/pool_2.v" \
+"E:/big_homework/final/LeNet/relu_1.v" \
+
+sv xil_defaultlib  \
+"E:/big_homework/final/LeNet/top.sv" \
+"E:/big_homework/final/LeNet/x7seg_dec.sv" \
+"E:/big_homework/final/LeNet/x7seg_scan.sv" \
+"E:/big_homework/LeNet/tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

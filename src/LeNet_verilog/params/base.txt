@@ -1,0 +1,20 @@
+conv1.weights 0
+conv1.bias 150
+conv2.weights 156
+conv2.bias 2556
+conv3.weights 2572
+conv3.bias 50572
+f4.weights 50692 
+f4.bias 61192
+f5.weights 61276
+f5.bias 62276
+
+
+
+conv1.result 0
+pool1.result 4704
+conv2.result 5880
+pool2.result 7480
+conv3.result 7880
+fc1.result 8000
+fc2.result 8084
